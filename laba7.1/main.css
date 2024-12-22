@@ -1,0 +1,518 @@
+  @charset "UTF-8";
+body {
+  background-color: #9a9272be;;
+}
+.header__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(d7.JPG);
+}
+
+
+
+.header__nav {
+  display: flex;
+  min-height: 3em;
+  margin-block-start: 2em;
+}
+.header__nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+  flex-grow: 1;
+}
+.header__nav-item {
+  flex-grow: 1;
+  min-height: 3em;
+  border-radius: 1.5em;
+  padding-block: 0.25em;
+  padding-inline: 0.25em;
+  transition: all 0.2s;
+}
+.header__nav-item:hover {
+  background-color: #a58d76; /* Фон при наведении */
+  color: rgb(0, 0, 0); /* Цвет текста при наведении */
+}
+.header__nav-link {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__section {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1em;
+  padding-block-start: 2em;
+  padding-block-end: 4em;
+}
+.main__flowers {
+  display: flex;
+  flex-flow: column;
+  row-gap: 2em;
+}
+.main__fl-img-container-suho {
+  position: relative;
+  overflow: hidden;
+  max-width: fit-content;
+}
+.main__fl-img-container-suho::after {
+  content: "Пионы";
+  font-size: 1.5em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Занимает всю ширину родителя */
+  height: 100%; /* Занимает всю высоту родителя */
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75); /* Убедитесь, что используете правильный формат rgba */
+  transition: opacity 0.2s ease, visibility 0.2s linear 0.2s; /* visibility изменяется сразу после opacity */
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+.main__fl-img-container-lili {
+  position: relative;
+  overflow: hidden;
+  max-width: fit-content;
+}
+.main__fl-img-container-lili::after {
+  content: "Лилии";
+  font-size: 1.5em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Занимает всю ширину родителя */
+  height: 100%; /* Занимает всю высоту родителя */
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75); /* Убедитесь, что используете правильный формат rgba */
+  transition: opacity 0.2s ease, visibility 0.2s linear 0.2s; /* visibility изменяется сразу после opacity */
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+.main__fl-img-container-lili:hover::after {
+  opacity: 0.75; /* Полная непрозрачность при наведении на родительский элемент */
+  visibility: visible; /* Становится видимым при наведении на родителя */
+  transition-delay: 0s;
+  color: antiquewhite;
+}
+.main__fl-img-container-suho:hover::after {
+  opacity: 0.75; /* Полная непрозрачность при наведении на родительский элемент */
+  visibility: visible; /* Становится видимым при наведении на родителя */
+  transition-delay: 0s;
+  color: antiquewhite;
+}
+.main__instraction {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  row-gap: 1.5em;
+}
+.main__btn-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.main__btn {
+  position: relative;
+  overflow: hidden; /* Скрывает элементы, выходящие за границы */
+  color: rgb(0, 0, 0);
+  background-color: #a58d76;
+  border: none;
+  border-radius: 5px;
+}
+.main__btn {
+  position: relative;
+  overflow: hidden; /* Скрывает элементы, выходящие за границы */
+  color: rgb(0, 0, 0);
+  background-color: #a58d76;
+  border: none;
+  border-radius: 5px;
+}
+.main__btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Увеличиваем ширину для эффекта */
+  height: 100%; /* Увеличиваем высоту для эффекта */
+  background-color: rgba(255, 255, 255, 0.156);
+  transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.5s ease;
+  z-index: 0; /* Устанавливаем псевдоэлемент позади текста */
+  transform: translate(-50%, -50%); /* Центрируем элемент */
+}
+.main__btn:hover::before {
+  border-radius: 50%;
+  width: 0; /* Сбрасываем ширину до нуля при наведении */
+  height: 0; /* Сбрасываем высоту до нуля при наведении */
+}
+.main__btn:hover {
+  color: black; /* Изменяем цвет текста при наведении */
+}
+.main__inf {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1em;
+}
+
+.btn {
+  padding-block: 0.75em;
+  padding-inline: 0.75em;
+  text-align: center;
+  min-height: 3em;
+  max-width: fit-content;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 1em;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  row-gap: 2.5em;
+  
+}
+.footer__addr {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+ul.footer__nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 0.4em;
+  row-gap: 1em;
+}
+
+li.nav__item {
+  text-align: center;
+  padding-block: 0.4em;
+  padding-inline: 0.4em;
+}
+
+.contacts {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  background-color:#a58d76;
+  z-index: 5;
+  height: 10px;
+  width: 100%;
+  border: none;
+  
+}
+footer {
+  background-color: #a58d76
+}
+
+@media (max-width: 365px) {
+  .contacts {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+  }
+  ul.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 0.4em;
+    row-gap: 0.5em;
+  }
+  .legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1372px;
+  padding-inline: 1.75em;
+  padding-block: 0.5em;
+  margin-inline: auto;
+}
+
+/**
+  Нормализация блочной модели
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+button {
+  all: unset;
+  box-sizing: inherit;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 1.75em;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1 {
+  font-size: clamp(
+    1.75rem,
+    1.4903846154rem + 1.1538461538vw,
+    2.5rem
+  );
+}
+
+h2 {
+  font-size: clamp(
+    1.625rem,
+    1.4086538462rem + 0.9615384615vw,
+    2.25rem
+  );
+}
+
+h3 {
+  font-size: clamp(
+    1.5rem,
+    1.3269230769rem + 0.7692307692vw,
+    2rem
+  );
+}
+
+h4 {
+  font-size: clamp(
+    1.375rem,
+    1.2451923077rem + 0.5769230769vw,
+    1.75rem
+  );
+}
+
+h5 {
+  font-size: clamp(
+    1.25rem,
+    1.1634615385rem + 0.3846153846vw,
+    1.5rem
+  );
+}
+
+h6 {
+  font-size: clamp(
+    1.125rem,
+    1.0817307692rem + 0.1923076923vw,
+    1.25rem
+  );
+}
+
+body {
+  font-size: clamp(
+    1rem,
+    0.9567307692rem + 0.1923076923vw,
+    1.125rem
+  );
+}
